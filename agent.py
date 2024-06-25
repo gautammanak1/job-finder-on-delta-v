@@ -34,8 +34,7 @@ async def get_job_details(job_role, rapidapi_key):
 
 # Hardcoded values for job role and RapidAPI key
 job_role = "Software Engineer , Web Developer, Sales , Ai Engineer , Community Manager , HR"
-rapidapi_key = ""  # Replace with your actual RapidAPI key (1c9df812ebmsh2f7fd956a0cb11ep18b1b6jsne9a64fafecb0)
-
+rapidapi_key = ""  
 @job_protocol.on_message(model=JobRequest, replies={UAgentResponse})
 async def load_job(ctx: Context, sender: str, msg: JobRequest):
     ctx.logger.info(f"Received job request: {msg.job_description}")
